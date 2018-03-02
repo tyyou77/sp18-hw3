@@ -1,13 +1,14 @@
-class TeachersController < ApplicationController
+class StudentsController < ApplicationController
   def new
-    @placeholder_course = '186'
+    @placeholder_name = 'Captain America'
+    @placeholder_courses = 'CS61A'
+    @placeholder_year = 'Junior'
   end
 
   def create
-    # Hint: params??
     @full_name = params[:full_name]
-    @course = params[:course_name]
-    @grade_level = params[:grade_level]
+    @courses = params[:courses_name]
+    @year = params[:year]
     # YOUR CODE HERE
 
 
@@ -18,4 +19,5 @@ class TeachersController < ApplicationController
     # so the result after a "create" (C in CRUD) is a show.
     render 'show'
   end
+
 end
